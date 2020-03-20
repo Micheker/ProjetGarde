@@ -40,7 +40,7 @@
 
 
 <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0YbIJotOR33F_jtSKxNXC5mPJw4xlXXU&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key={VOTRE CLE API}&callback=initMap">
 </script>
 
 </html>
