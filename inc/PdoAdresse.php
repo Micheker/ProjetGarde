@@ -1,18 +1,12 @@
 <?php
-	class PdoAdresse {
-		private $host = 'localhost';
-		private $dbName = 'geoloc';
-		private $user = 'root';
-		private $pass = '';
+// Opens a connection to a MySQL server.
+$connection=mysqli_connect ("localhost", 'root', '','geoloc');
+if (!$connection) {
+    die('Not connected : ' . mysqli_connect_error());
+}
 
-		public function connect() {
-			try {
-				$conn = new PDO('mysql:host=' . $this->host . '; dbname=' . $this->dbName, $this->user, $this->pass);
-				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-				return $conn;
-			} catch( PDOException $e) {
-				echo 'Database Error: ' . $e->getMessage();
-			}
-		}
-	}
- ?>
+// Sets the active MySQL database.
+/*$db_selected = mysqli_select_db($connection,'accounts');
+if (!$db_selected) {
+    die ('Can\'t use db : ' . mysqli_error($connection));
+}*/
