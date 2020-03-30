@@ -35,7 +35,35 @@
   <header>
       <nav>
           <a href="index.php"><img src="assets/img/image2vector.svg" class="logo"></a>
+          <div class="collapse navbar-collapse" id="ftco-nav">
+              <ul class="navbar-nav ml-auto">
+                  <?php if (!isLogged()) { ?>
 
+                  <li class="nav-item active"><a href="index.php" class="nav-link pl-0">Accueil</a></li>
+                  <li class="nav-item"><a href="register.php" class="nav-link">Inscription</a></li>
+                  <li class="nav-item"><a href="login.php" class="nav-link">Connexion</a></li>
+                  <li class="nav-item"><a href="about.php" class="nav-link">A propos</a></li>
+                  <li class="nav-item"><a href="team.php" class="nav-link">Notre équipe</a></li>
+                  <li class="nav-item"><a href="services.php" class="nav-link">Nos services</a></li>
+                  <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+
+                  <?php } elseif (idAdmin()) { ?>
+                  <li class="nav-item active"><a href="index.php" class="nav-link pl-0">Accueil</a></li>
+                  <li class="nav-item"><a href="logout.php" class="nav-link">Deconnexion</a></li>
+                  <li class="nav-item"><a href="geolocalisation.php" class="nav-link">Géolocalisation</a></li>
+                  <li class="nav-item"><a href="admin.php"  class="nav-link" >Pannel admin</a></li>
+                  <li class="nav-item"> Bonjour <?php echo $_SESSION['login']['pseudo'] ?> !</li>
+
+                  <?php } else { ?>
+                  <li class="nav-item active"><a href="logout.php" >Deconnexion</a></li>
+                  <li class="nav-item active"><a href="index.php" class="nav-link pl-0">Accueil</a></li>
+                  <li class="nav-item"><a href="about.php" class="nav-link">A propos</a></li>
+                  <li class="nav-item"><a href="team.php" class="nav-link">Notre équipe</a></li>
+                  <li class="nav-item"><a href="services.php" class="nav-link">Nos services</a></li>
+                  <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+                  <?php } ?>
+              </ul>
+          </div>
       </nav>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </header>

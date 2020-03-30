@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="09a8b1e1-df2f-4494-a85e-d50e5b07dea4" name="local" url="http://localhost/">
+        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\garde" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

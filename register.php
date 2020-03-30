@@ -73,7 +73,7 @@ if (!empty($_POST['submitted'])) {
         $query->bindValue(':password', $hashpsw, PDO::PARAM_STR);
         $query->bindValue(':token', $token, PDO::PARAM_STR);
         $query->bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
-        $query->bindValuer(':adresse',$adresse, PDO::PARAM_STR);
+        $query->bindValue(':adresse',$adresse, PDO::PARAM_STR);
 
         $query->execute();
         $succes = true;

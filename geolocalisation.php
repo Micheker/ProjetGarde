@@ -1,6 +1,6 @@
 <?php
-require('./inc/header.php');
-include('./locations-model.php');
+// require('./inc/header.php');
+include('./inc/locations-model.php');
 //get_unconfirmed_locations();exit;
 ?>
 <!doctype html>
