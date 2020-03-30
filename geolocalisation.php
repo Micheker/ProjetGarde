@@ -1,5 +1,5 @@
 <?php
-// require('./inc/header.php');
+include('./inc/header.php');
 include('./inc/locations-model.php');
 //get_unconfirmed_locations();exit;
 ?>
@@ -157,8 +157,9 @@ include('./inc/locations-model.php');
             event.preventDefault();
             var lat = $('#lat').val();
             var lng = $('#lng').val();
-            var url = 'locations-model.php?add_location&lat=' + lat + '&lng=' + lng;
-            $.ajax({
+            var url = 'inc/locations-model.php?add_location&lat=' + lat + '&lng=' + lng;
+            console.log(url);
+              $.ajax({
                 url: url,
                 method: 'GET',
                 dataType: 'json',
@@ -176,6 +177,6 @@ include('./inc/locations-model.php');
 
 
 <?php
-require('./inc/footer.php');
+include('./inc/footer.php');
 
 ?>
