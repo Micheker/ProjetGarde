@@ -6,7 +6,7 @@ $success = false;
 
 //	$sql = "SELECT id FROM creche_list WHERE user_id FROM users = :creche_id";
 
-if (is_logged()) {
+if (isLogged()) {
     $idusers = $_SESSION['login']['id'];
     $sql = "SELECT cl.*,cu.id AS id,cl.id AS movieid, cl.nom AS nom,u.email AS emailuser FROM creche_user AS cu
             LEFT JOIN creche_list AS cl

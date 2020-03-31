@@ -3,7 +3,7 @@ session_start();
 require('inc/pdo.php');
 require('function/function.php');
 
-if (is_logged()) {
+if (isLogged()) {
   $user_id = $_SESSION['login']['id'];
 
   if(!empty($_GET['id'])) {

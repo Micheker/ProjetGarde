@@ -1,12 +1,8 @@
 <?php
-include('./inc/header.php');
-include('./inc/locations-model.php');
+include('inc/header.php');
+include('inc/locations-model.php');
 //get_unconfirmed_locations();exit;
 ?>
-<!doctype html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
 <title>Géolocalisation</title>
     <style>
 
@@ -157,8 +153,7 @@ include('./inc/locations-model.php');
             event.preventDefault();
             var lat = $('#lat').val();
             var lng = $('#lng').val();
-            var url = 'inc/locations-model.php?add_location&lat=' + lat + '&lng=' + lng;
-            console.log(url);
+            var url = 'locations-model.php?add_location&lat=' + lat + '&lng=' + lng;
               $.ajax({
                 url: url,
                 method: 'GET',
@@ -177,6 +172,5 @@ include('./inc/locations-model.php');
 
 
 <?php
-include('./inc/footer.php');
-
+include('inc/footer.php');
 ?>
