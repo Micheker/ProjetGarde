@@ -35,7 +35,7 @@ if (!empty($_POST['submitted'])) {
         }
     }
 //email
-    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+    if (empty($email) || filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
         $errors['email'] = 'Veuillez renseigner un email valide';
     } else {
         //no errors

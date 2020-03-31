@@ -1,6 +1,7 @@
 <?php
+require('function/function.php');
 include('inc/header.php');
-include('inc/locations-model.php');
+require('locations-model.php');
 //get_unconfirmed_locations();exit;
 ?>
 <title>Géolocalisation</title>
@@ -77,7 +78,7 @@ include('inc/locations-model.php');
 
         var saved_markers = <?= get_saved_locations() ?>;
         var user_location = [1.0993,49.4431];
-        mapboxgl.accessToken = 'pk.eyJ1IjoibWljaGVrZXIiLCJhIjoiY2s4NDgwaWM3MHlwcDNnb3dxMHNmZHVkeiJ9.JQZlUr70dlmItGQ2TPpdHQ';
+        mapboxgl.accessToken = 'pk.eyJ1IjoibWljaGVrZXIiLCJhIjoiY2s4Znd4eTJkMDZhYjNpbWw1cGhndDZ3cSJ9.yqRnZiPxp1D0nmZP6Q8VHQ';
         var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v9',
