@@ -80,8 +80,8 @@ if (!empty($_POST['submitted'])) {
         header('Location: login.php');
     }
 }
-//debug($_POST);
-//debug($errors);
+// debug($_POST);
+// debug($errors);
 include('inc/header.php');
 ?>
     <div id="balise"></div>

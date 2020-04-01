@@ -35,7 +35,6 @@ include('inc/header.php'); ?>
 <div class="creche">
 <h2><?php echo $creche['nom']; ?></h2>
 <p>Numéro : <?= $creche['id']; ?></p>
-<?php echo '<li><a href="details.php?slug='.$creche['slug'].'"></a></li>';?>
 </div>
 <!-- // end foreach -->
 <?php } ?>

@@ -4,13 +4,13 @@ include('inc/pdo.php');
 include('function/function.php');
 
 
-if (!empty($_GET['slug'])) {
+if (!empty($_GET['nom'])) {
 
-    $slug = $_GET['slug'];
+    $nom = $_GET['nom'];
 
-    $sql = "SELECT * FROM creche_list WHERE slug = :slug";
+    $sql = "SELECT * FROM creche_list WHERE nom = :nom";
     $query = $pdo->prepare($sql);
-    $query->bindValue(':slug', $slug);
+    $query->bindValue(':nom', $nom);
     $query->execute();
     $creches = $query->fetch();
 
