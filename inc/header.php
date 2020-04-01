@@ -33,7 +33,7 @@
 </style>
   <header>
       <nav>
-          <a href="index.php"><img src="assets/img/image2vector.svg" class="logo"></a>
+          <a href="index.php"><img src="assets/img/Child_guard.png" class="logo"></a>
           <div class="collapse navbar-collapse" id="ftco-nav">
               <ul class="navbar-nav ml-auto">
                   <?php if (!isLogged()) { ?>

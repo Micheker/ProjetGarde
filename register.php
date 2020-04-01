@@ -9,7 +9,7 @@ $succes = false;
 if (!empty($_POST['submitted'])) {
     //faille xss
     $pseudo = clean($_POST['pseudo']);
-    $email = clean($_POST['email']);
+    $email = trim(strip_tags($_POST['email']));
     $adresse = clean($_POST['adresse']);
     $password1 = clean($_POST['password1']);
     $password2 = clean($_POST['password2']);
