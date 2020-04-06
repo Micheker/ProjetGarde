@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('function/function.php');
 require_once('inc/header.php'); ?>
 

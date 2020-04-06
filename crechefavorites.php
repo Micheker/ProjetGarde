@@ -15,7 +15,7 @@ if (isLogged()) {
             ON cu.user_id = u.id
             WHERE cu.user_id = $idusers
             AND note IS NULL";
-    $query  = $pdo->prepare($sql);
+    $query = $pdo->prepare($sql);
     $query->execute();
     $creches = $query->fetchAll();
     // debug($creches);
