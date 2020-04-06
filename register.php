@@ -63,11 +63,12 @@ if (!empty($_POST['submitted'])) {
         $hashpsw = password_hash($password1, PASSWORD_BCRYPT);
         $token = generateRandomString(200);
 
+
         //insert
 
 
 
-        $sql = "INSERT INTO users (id,email,role,password,createdAt,token,pseudo,adresse) VALUES (null,:email,'users',:password,NOW(),:token,:pseudo,:adresse)";
+        $sql = "INSERT INTO users (id,email,role,password,created_at,token,pseudo,adresse) VALUES (null,:email,'users',:password,NOW(),:token,:pseudo,:adresse)";
         $query = $pdo->prepare($sql);
         $query->bindValue(':email', $email, PDO::PARAM_STR);
         $query->bindValue(':password', $hashpsw, PDO::PARAM_STR);
@@ -77,6 +78,7 @@ if (!empty($_POST['submitted'])) {
 
         $query->execute();
         $succes = true;
+        // redirection vers la page connexion
         header('Location: login.php');
     }
 }

@@ -26,6 +26,7 @@ include('inc/header.php'); ?>
 
     <div class="wrap">
         <h1><?php echo $creches['nom']; ?></h1>
+        <p>Description: <?php echo $creches['description'] ?></p>
         <p>Adresse: <?php echo $creches['adresse'] ?></p>
         <p>Numéro de téléphone: <?php echo $creches['telephone'] ?></p>
         <p>Notes: <?php echo $creches['note'] ?></p>
