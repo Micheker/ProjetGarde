@@ -33,6 +33,6 @@ if (isLogged()) {
     die('404');
   }
 } else {
-  header('Location: index.php');
+  header('Location: listedescreches.php');
 }
 //die('no logged');

@@ -13,8 +13,7 @@ if (isLogged()) {
             ON cu.creche_id = cl.id
             LEFT JOIN users AS u
             ON cu.user_id = u.id
-            WHERE cu.user_id = $idusers
-            AND note IS NULL";
+            WHERE cu.user_id = $idusers";
     $query = $pdo->prepare($sql);
     $query->execute();
     $creches = $query->fetchAll();
@@ -35,6 +34,7 @@ include('inc/header.php'); ?>
 <div class="creche">
 <h2><?php echo $creche['nom']; ?></h2>
 <p>Numéro : <?= $creche['id']; ?></p>
+<?php echo '<li><a href="details.php?slug='.$creche['slug'].'"><img src="logocreches/'.$creche['movieid'].'.jpg" alt=""></a></li>';?>
 </div>
 <!-- // end foreach -->
 <?php } ?>

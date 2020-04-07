@@ -4,13 +4,13 @@ include('inc/pdo.php');
 include('function/function.php');
 
 
-if (!empty($_GET['nom'])) {
+if (!empty($_GET['slug'])) {
 
-    $nom = $_GET['nom'];
+    $slug = $_GET['slug'];
 
-    $sql = "SELECT * FROM creche_list WHERE nom = :nom";
+    $sql = "SELECT * FROM creche_list WHERE slug = :slug";
     $query = $pdo->prepare($sql);
-    $query->bindValue(':nom', $nom);
+    $query->bindValue(':slug', $slug);
     $query->execute();
     $creches = $query->fetch();
 
@@ -25,6 +25,7 @@ include('inc/header.php'); ?>
 
 
     <div class="wrap">
+      <?php echo "<img src='logocreches/" . $creches['id'] . ".jpg' />"; ?>
         <h1><?php echo $creches['nom']; ?></h1>
         <p>Description: <?php echo $creches['description'] ?></p>
         <p>Adresse: <?php echo $creches['adresse'] ?></p>

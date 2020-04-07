@@ -56,6 +56,7 @@
                   <?php } else { ?>
                   <li class="nav-item active"><a href="index.php" class="nav-link pl-0">Accueil</a></li>
                   <li class="nav-item"><a href="logout.php" class="nav-link">Deconnexion</a></li>
+                  <li class="nav-item"><a href="listedescreches.php" class="nav-link">Liste des crèches</a></li>
                   <li class="nav-item"><a href="crechefavorites.php" class="nav-link">Mes crèches préférées</a></li>
                   <li class="nav-item"><a href="about.php" class="nav-link">A propos</a></li>
                   <li class="nav-item"><a href="team.php" class="nav-link">Notre équipe</a></li>
