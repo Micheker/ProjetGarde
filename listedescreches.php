@@ -32,7 +32,7 @@ include('inc/header.php'); ?>
                                                                                         if (file_exists($img)) {
                                                                                             echo $img;
                                                                                         } else {
-                                                                                            echo 'asset/img/trololo.jpg';
+                                                                                            echo 'assets/img/trololo.jpg';
                                                                                         } ?>" alt="<?= $creche['nom'] ?>"> </a>
     </div>
 <?php } ?>
