@@ -76,7 +76,7 @@ require('locations-model.php');
 
     <script>
 
-        var saved_markers = <?= get_saved_locations() ?>;
+        var saved_markers = "<?= get_saved_locations() ?>";
         var user_location = [1.0993,49.4431];
         mapboxgl.accessToken = 'pk.eyJ1IjoibWljaGVrZXIiLCJhIjoiY2s4Znd4eTJkMDZhYjNpbWw1cGhndDZ3cSJ9.yqRnZiPxp1D0nmZP6Q8VHQ';
         var map = new mapboxgl.Map({
@@ -99,7 +99,6 @@ require('locations-model.php');
         map.on('load', function() {
             addMarker(user_location,'load');
             add_markers(saved_markers);
-
             // Listen for the `result` event from the MapboxGeocoder that is triggered when a user
             // makes a selection and add a symbol that matches the result.
             geocoder.on('result', function(ev) {
@@ -167,7 +166,6 @@ require('locations-model.php');
         });
 
         document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
-
     </script>
 
 

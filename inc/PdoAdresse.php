@@ -1,6 +1,6 @@
 <?php
 // Opens a connection to a MySQL server.
-$connection=mysqli_connect ("localhost", 'root', '','geoloc');
+$connection=mysqli_connect ("localhost:3308", 'root', '', 'geoloc');
 if (!$connection) {
     die('Not connected : ' . mysqli_connect_error());
 }

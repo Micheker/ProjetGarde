@@ -1,5 +1,5 @@
 <?php
-require('./inc/pdoadresse.php');
+require('inc/pdoadresse.php');
 
 // Gets data from URL parameters.
 if(isset($_GET['add_location'])) {
@@ -8,7 +8,7 @@ if(isset($_GET['add_location'])) {
 
 
 function add_location(){
-    $con=mysqli_connect ("localhost", 'root', '','geoloc');
+    $con=mysqli_connect ("localhost:3308", 'root', '', 'geoloc');
     if (!$con) {
         die('Not connected : ' . mysqli_connect_error());
     }
@@ -22,13 +22,13 @@ function add_location(){
         mysqli_real_escape_string($con,$lng));
 
     $result = mysqli_query($con,$query);
-    echo json_encode("Inserted Successfully");
+    echo json_encode("Crèche marquée avec succès");
     if (!$result) {
         die('Invalid query: ' . mysqli_error($con));
     }
 }
 function get_saved_locations(){
-    $con=mysqli_connect ("localhost", 'root', '','geoloc');
+    $con=mysqli_connect ("localhost:3308", 'root', '', 'geoloc');
     if (!$con) {
         die('Not connected : ' . mysqli_connect_error());
     }

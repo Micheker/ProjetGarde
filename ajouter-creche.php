@@ -18,7 +18,7 @@ if (isLogged()) {
     if(!empty($creche)) {
       // si il exist
         // insertion en bdd creche_user
-        $sql = "INSERT INTO creche_user VALUES (null,$user_id,$creche_id,null,NOW(),null)";
+        $sql = "INSERT INTO creche_user VALUES (null,$user_id,$creche_id,NOW(),null)";
         $query = $pdo->prepare($sql);
         //$query->bindValue(':id',$creche_id);
         $query->execute();

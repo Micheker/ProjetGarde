@@ -30,8 +30,7 @@ include('inc/header.php'); ?>
         <p>Description: <?php echo $creches['description'] ?></p>
         <p>Adresse: <?php echo $creches['adresse'] ?></p>
         <p>Numéro de téléphone: <?php echo $creches['telephone'] ?></p>
-        <p>Notes: <?php echo $creches['note'] ?></p>
-
+        <a href="noterlacreche.php?id=<?php echo $creches['rating_number']; ?>">Donner une note</a>
 
     <a href="ajouter-creche.php?id=<?php echo $creches['id']; ?>">Ajouter une crèche</a>
     </div>
