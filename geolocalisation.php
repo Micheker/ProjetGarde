@@ -4,7 +4,6 @@ include('inc/header.php');
 require('locations-model.php');
 //get_unconfirmed_locations();exit;
 ?>
-<title>Géolocalisation</title>
     <style>
 
         input[type=text], select {
@@ -39,7 +38,7 @@ require('locations-model.php');
             margin-left: 20%;
             width:50%
         }
-        #map { position:absolute;left: 350px; top:350px; bottom:0px;height:550px ;width:660px; }
+        #map { position:absolute;left: 350px; top:350px; bottom:0px;height:550px ;width:660px;  }
         .geocoder {
             position:absolute;left: 350px; top:290px;
         }
@@ -76,7 +75,7 @@ require('locations-model.php');
 
     <script>
 
-        var saved_markers = "<?= get_saved_locations() ?>";
+        var saved_markers = <?= get_saved_locations() ?>;
         var user_location = [1.0993,49.4431];
         mapboxgl.accessToken = 'pk.eyJ1IjoibWljaGVrZXIiLCJhIjoiY2s4Znd4eTJkMDZhYjNpbWw1cGhndDZ3cSJ9.yqRnZiPxp1D0nmZP6Q8VHQ';
         var map = new mapboxgl.Map({

@@ -1,7 +1,6 @@
 
 
 <script src="assets/js/main.js"></script>
-</div>
 <footer>
     <section id="footer">
         <div class="colonne1">
