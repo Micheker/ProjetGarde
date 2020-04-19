@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3308
--- Généré le :  jeu. 09 avr. 2020 à 15:24
+-- Généré le :  Dim 19 avr. 2020 à 19:21
 -- Version du serveur :  8.0.18
 -- Version de PHP :  7.4.0
 
@@ -31,10 +31,25 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `adressecreche`;
 CREATE TABLE IF NOT EXISTS `adressecreche` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `latitude` float(10,6) NOT NULL,
-  `longitude` float(10,6) NOT NULL,
+  `lat` float(10,6) NOT NULL,
+  `lng` float(10,6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `adressecreche`
+--
+
+INSERT INTO `adressecreche` (`id`, `lat`, `lng`) VALUES
+(1, 0.000000, 0.000000),
+(2, 0.000000, 0.000000),
+(3, 0.000000, 0.000000),
+(4, 0.000000, 0.000000),
+(5, 49.452923, 1.085567),
+(6, 49.462742, 1.116466),
+(7, 49.446224, 1.136379),
+(8, 49.422272, 1.132559),
+(9, 49.423161, 1.093192);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
