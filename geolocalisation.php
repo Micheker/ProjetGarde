@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('function/function.php');
 include('inc/header.php');
 require('locations-model.php');
@@ -38,9 +39,9 @@ require('locations-model.php');
             margin-left: 20%;
             width:50%
         }
-        #map { position:absolute;left: 350px; top:350px; bottom:0px;height:550px ;width:660px;  }
+        #map {left: 350px; bottom:0px;height:550px ;width:660px;  }
         .geocoder {
-            position:absolute;left: 350px; top:290px;
+            left: 350px; top:290px;
         }
     </style>
 
