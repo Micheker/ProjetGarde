@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 include('inc/pdo.php');
 include('function/function.php');
